@@ -2,7 +2,7 @@ body{
    
     color: #333;
     text-align: center;
-    font-family: Arial;
+    font-family: courier;
     font-size: 16px;
     margin: 0;
     padding: 0;
@@ -12,7 +12,7 @@ body{
     width: 70%;
     padding: 1em;
     text-align: left;
-    border: 1px solid #DDD;
+    border: 1px solid rgb(221, 221, 221);
     margin: 0 auto;
 }
 
