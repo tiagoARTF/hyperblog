@@ -1,3 +1,6 @@
+
+
+
 openssl rsa -pubout -in clave_privada.pem -out clave_publica.pem
 echo "Mensaje..." > ejercicio1.txt
 
