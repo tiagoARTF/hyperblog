@@ -1,12 +1,3 @@
-echo "Versión original del archivo" > ejercicio4.txt
-
-sha256sum ejercicio4.txt
-
-echo "Cambio sobre el archivo original" >> ejercicio4.txt
-
-sha256sum ejercicio4.txt
-
-
 
 
 
