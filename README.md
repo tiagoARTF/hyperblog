@@ -1,13 +1,10 @@
-openssl genpkey -algorithm RSA -out firma_privada.pem
+echo "Versión original del archivo" > ejercicio4.txt
 
-echo "Documento a firmar por parte de los estudiantes" > ejercicio3.txt
+sha256sum ejercicio4.txt
 
-openssl dgst -sha256 -sign firma_privada.pem -out firma.bin ejercicio3.txt
+echo "Cambio sobre el archivo original" >> ejercicio4.txt
 
-openssl rsa -pubout -in firma_privada.pem -out firma_publica.pem
-
-openssl dgst -sha256 -verify firma_publica.pem -signature firma.bin ejercicio3.txt
-
+sha256sum ejercicio4.txt
 
 
 
