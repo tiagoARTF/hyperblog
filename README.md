@@ -1,15 +1,13 @@
-echo "Mensaje secreto para cifrar de la clase principios de criptografia" > ejercicio1.txt
+echo "Este archivo corresponde al taller evaluativo de principios de criptografia" > ejercicio2.txt
 
 
+openssl enc -aes-256-cbc -salt -pbkdf2 -in ejercicio2.txt -out archivo_cifrado.enc
 
 
-openssl rsautl -encrypt -inkey clave_publica.pem -pubin -in ejercicio1.txt -out mensaje_cifrado.bin
+openssl enc -aes-256-cbc -d -pbkdf2 -in archivo_cifrado.enc -out archivo_descifrado.txt
 
 
-openssl rsautl -decrypt -inkey clave_privada.pem -in mensaje_cifrado.bin -out mensaje_descifrado.txt
-
-
-cat mensaje_descifrado.txt
+cat archivo_descifrado.txt
 
 
 
