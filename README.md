@@ -1,13 +1,15 @@
-echo "Este archivo corresponde al taller evaluativo de principios de criptografia" > ejercicio2.txt
+openssl genpkey -algorithm RSA -out firma_privada.pem
+
+echo "Documento a firmar por parte de los estudiantes" > ejercicio3.txt
+
+openssl dgst -sha256 -sign firma_privada.pem -out firma.bin ejercicio3.txt
+
+openssl rsa -pubout -in firma_privada.pem -out firma_publica.pem
+
+openssl dgst -sha256 -verify firma_publica.pem -signature firma.bin ejercicio3.txt
 
 
-openssl enc -aes-256-cbc -salt -pbkdf2 -in ejercicio2.txt -out archivo_cifrado.enc
 
-
-openssl enc -aes-256-cbc -d -pbkdf2 -in archivo_cifrado.enc -out archivo_descifrado.txt
-
-
-cat archivo_descifrado.txt
 
 
 
